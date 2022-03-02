@@ -6,12 +6,16 @@ import Sidebar from '../sidebar/Sidebar'
 import Rouutes from '../Rouutes'
 import Dashboard from '../../pages/Dashboard'
 import Customers from '../../pages/Customers'
+import Nopage from '../../pages/Nopage'
 
 const Layout = () => {
-  return (
-    <BrowserRouter>
-        <Route path='/'>
-            <div className='layout'>
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' component={Nopage}/>
+            </Routes>
+
+            {/* <div className='layout'>
                 <Sidebar/>
                 <div className='layout__content'>
                     <div className='layout__content-main'>
@@ -20,9 +24,8 @@ const Layout = () => {
                         <Rouutes />
                     </div>
                 </div>
-            </div>
-        </Route>
-    </BrowserRouter>
+            </div> */}
+        </BrowserRouter >
   )
 }
 

@@ -4,13 +4,15 @@ import '../assets/css/nopage.css'
 
 const Nopage = () => {
     return (
-        <div>
+        <div className='nopagemain'> 
             <header>
                 <a href='#'>Terms and Conditions</a>
             </header>
             <section>
                 <nav>
-
+                    <ul>
+                        <li><a href='/'>Home</a></li>
+                    </ul>
                 </nav>
                 <article>
                     <h2>Work in progress</h2>

@@ -8,6 +8,7 @@ import './assets/css/index.css'
 
 import Layout from './components/layout/Layout'
 import Nopage from './pages/Nopage';
+import Rouutes from './components/Rouutes';
 
 document.title= 'Admin Panel'
 
