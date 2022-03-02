@@ -8,15 +8,14 @@ import './assets/css/index.css'
 
 import Layout from './components/layout/Layout'
 import Nopage from './pages/Nopage';
-import Rouutes from './components/Rouutes';
 
-document.title= 'Admin Panel'
+document.title = 'Admin Panel'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Nopage />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Layout />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
