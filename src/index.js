@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import './assets/boxicons-2.1.1/css/boxicons.min.css'
+import './assets/css/grid.css'
+import './assets/css/index.css'
+
+import Layout from './components/layout/Layout'
+
+document.title= 'Admin Panel'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Layout />
   </React.StrictMode>,
   document.getElementById('root')
 );
