@@ -7,12 +7,13 @@ import './assets/css/grid.css'
 import './assets/css/index.css'
 
 import Layout from './components/layout/Layout'
+import Nopage from './pages/Nopage';
 
 document.title= 'Admin Panel'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Layout />
+    <Nopage />
   </React.StrictMode>,
   document.getElementById('root')
 );

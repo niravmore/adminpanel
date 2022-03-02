@@ -10,10 +10,18 @@ import Customers from '../../pages/Customers'
 const Layout = () => {
   return (
     <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Dashboard />}/>
-            <Route path="/customers" element={<Customers />} />
-        </Routes>
+        <Route path='/'>
+            <div className='layout'>
+                <Sidebar/>
+                <div className='layout__content'>
+                    <div className='layout__content-main'>
+                        <h1>Welcome to Admin panel</h1>
+                        <h2>Please Login</h2>
+                        <Rouutes />
+                    </div>
+                </div>
+            </div>
+        </Route>
     </BrowserRouter>
   )
 }
