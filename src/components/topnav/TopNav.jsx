@@ -1,6 +1,18 @@
 import React from 'react'
+import DropDown from '../dropdown/DropDown'
+
+import { Link } from 'react-router-dom'
 
 import './topnav.css'
+
+import notifications from '../../assets/JsonData/notification.json'
+
+const renderNotificationItem = (item, index) => (
+    <div className='notification-item' key={index}>
+        <i className={item.icon}></i>
+        <span>{item.content}</span>
+    </div>
+)
 
 const TopNav = () => {
     return (
@@ -11,26 +23,24 @@ const TopNav = () => {
             </div>
             <div className='topnav__right'>
                 <div className='topnav__right-item'>
-                    NavPage_1
                     {/* Drop down here */}
+                    <DropDown
+                        icon='bx bx-user'
+                    />
                 </div>
-            </div>
-            <div className='topnav__right'>
                 <div className='topnav__right-item'>
-                    NavPage_2
                     {/* Drop down here */}
+                    <DropDown
+                        icon='bx bx-bell'
+                        badge='12'
+                        contentData={notifications}
+                        renderItems={(item, index) => renderNotificationItem(item, index)}
+                        renderFooter={() => <Link to='/'>View All</Link>}
+                    />
                 </div>
-            </div>
-            <div className='topnav__right'>
                 <div className='topnav__right-item'>
-                    NavPage_3
                     {/* Drop down here */}
-                </div>
-            </div>
-            <div className='topnav__right'>
-                <div className='topnav__right-item'>
-                    NavPage_4
-                    {/* Drop down here */}
+                    <DropDown />
                 </div>
             </div>
         </div>
