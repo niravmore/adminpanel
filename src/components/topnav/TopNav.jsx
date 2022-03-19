@@ -8,11 +8,11 @@ import './topnav.css'
 
 import notifications from '../../assets/JsonData/notification.json'
 
-import user_image from '../../assets/images/rex.png'
+import user_image from '../../assets/images/logo.png'
 
 import user_menu from '../../assets/JsonData/user_menus.json'
 
-const curr_user = {
+const curt_user = {
     display_name: 'Nirav',
     image: user_image
 }
@@ -27,7 +27,7 @@ const renderNotificationItem = (item, index) => (
 const renderUserToggle = user => (
     <div className='topnav__right-user'>
         <div className='topnav__right-user__image'>
-            <img src={user.image} alt='' />
+            <img src='../../assets/images/logo.png' alt='profile_pic'/>
         </div>
         <div className='topnav__right-user__name'>
             {user.display_name}
@@ -56,11 +56,11 @@ const TopNav = () => {
                 <div className='topnav__right-item'>
                     {/* Drop down here */}
                     <DropDown
-                        //icon='bx bx-user'
-                        icon={curr_user.image}
-                        customToggle={() => renderUserToggle(curr_user)}
-                        contentData={user_menu}
-                        renderItems={(item, index) => renderUserMenu(item, index)}
+                        icon='bx bx-user'
+                        //icon={curr_user.image}
+                        customToggle = {() => renderUserToggle(curt_user)}
+                        contentData = {user_menu}
+                        renderItems = {(item, index) => renderUserMenu(item, index)}
                     />
                 </div>
                 <div className='topnav__right-item'>
